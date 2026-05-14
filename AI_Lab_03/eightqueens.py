@@ -1,4 +1,5 @@
 N = 8
+# Logic
 def is_safe(board, row, col):
     for i in range(row):
         if board[i] == col or \
@@ -28,6 +29,7 @@ def solve(row, board):
             board[row] = col
             solve(row + 1, board)
 count = 0
+#Board Size 
 board = [-1] * N
 solve(0, board)
 print("Total solutions:", count)
